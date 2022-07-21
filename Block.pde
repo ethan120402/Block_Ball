@@ -14,4 +14,12 @@ public class Block{
     void show(){
         rect(x,y,w,h);
     }
+    boolean hit(Ball ball){
+        if(abs(ball.by-y) <= h/2+ball.raduis){
+            if(x-w/2<=ball.bx&&ball.bx<=x+w/2){
+                return true;
+            }
+        }
+        return false;
+    }
 }
