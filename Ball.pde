@@ -1,7 +1,6 @@
 public class Ball{
     float dx; 
     float dy;
-
     float bx;
     float by;
     float raduis;
