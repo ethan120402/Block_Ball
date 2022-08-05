@@ -1,4 +1,5 @@
 int n = 0;
+
 Block[] b = new Block[1000];
 Bar bar = new Bar(450,500,80,5);
 Ball ball = new Ball(0,0,0,0);
