@@ -10,7 +10,6 @@ public class Block{
         this.h=h;
 
     }
-
     void show(){
         rect(x,y,w,h);
     }
