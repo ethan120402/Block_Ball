@@ -15,7 +15,7 @@ public class Block{
     }
     boolean hit(Ball ball){
         if(abs(ball.by-y) <= h/2+ball.raduis){
-            if(x-w/2<=ball.bx&&ball.bx<=x+w/2){
+            if(x-w/2-ball.raduis<=ball.bx&&ball.bx<=x+w/2+ball.raduis){
                 return true;
             }
         }

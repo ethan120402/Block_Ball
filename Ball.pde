@@ -20,7 +20,7 @@ public class Ball{
         by= bar.y-15;
     }
  
-    void move(Bar bar){
+    void move( ){
         bx=bx+dx;
         by=by+dy;
         if(by<0){
@@ -36,9 +36,7 @@ public class Ball{
             dx=0;
             dy=0;
         }
-        if(bar.hit(this)==true){
-              dy=dy*-1;
-        }
+     
     }
     void fire(){
         dy=random(5,10)*-1;
@@ -47,6 +45,12 @@ public class Ball{
             dx=dx*-1;
         }
            bx=bx+dx;
+        by=by+dy;
+    }
+    void bounce(){
+        dy=dy*-1;
+
+        bx=bx+dx;
         by=by+dy;
     }
 }
