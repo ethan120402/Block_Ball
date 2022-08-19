@@ -35,23 +35,25 @@ void draw() {
     }
     bar.move();
     bar.show();
-    
-    if (bar.hit(ball) ==  true) {
+   if (bar.hit2(ball) ==  true) {
         ball.bounce();
     }
-    
-    for (int i = 0;i < b.length;i++) {
-        if (b[i]!= null) {
-            if (b[i].hit(ball) ==  true) {
-                b[i] = null;
-                ball.bounce();
-                break;
-            }
+    // check blocks
+    for (int i = 0; i < b.length; i++) {
+        if (b[i] == null) {
+            continue;
         }
-        
+        if (b[i].hit2(ball) == true) {
+            ball.bounce();
+            // block set null
+            b[i] = null;
+            break;
+        }
     }
-    
-    if (ball.dx ==  0 &&  ball.dy ==  0) {
+        
+    // ball movement
+    if (ball.dx ==  0 && ball.dy ==  0) {
+        // ball is on the bar
         ball.moveByBar(bar);
         if (mousePressed) {
             ball.fire();
@@ -59,8 +61,7 @@ void draw() {
     } else{
         ball.move();
     }
-    
-    ball.show();
+    ball.show();    
     
 } 
 

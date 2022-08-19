@@ -3,16 +3,16 @@ public class Ball{
     float dy;
     float bx;
     float by;
-    float raduis;
+    float radius;
     public Ball(int bx, int by, float dx, float dy){
         this.dx=dx;
         this.dy=dy;
         this.bx=bx;
         this.by=by;
-        this.raduis=15;
+        this.radius=15;
     }
     void show(){
-        circle(bx, by, raduis*2);
+        circle(bx, by, radius*2);
     }
 
     void moveByBar(Bar bar){
@@ -49,7 +49,7 @@ public class Ball{
     }
     void bounce(){
         dy=dy*-1;
-
+   
         bx=bx+dx;
         by=by+dy;
     }
